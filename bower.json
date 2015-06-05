@@ -1,0 +1,13 @@
+{
+  "name": "polyline",
+  "main": "polyline.js",
+  "version": "1.0.0",
+  "authors": [
+    "jdeolive <jdeolive@gmail.com>"
+  ],
+  "description": "Parser/Encoder for Spatial4j extended polyline format",
+  "moduleType": [
+    "node"
+  ],
+  "license": "Apache-2.0"
+}
