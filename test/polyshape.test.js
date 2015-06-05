@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
-var polyline = require('../polyline.js');
+var polyshape = require('../polyshape.js');
 
-describe('polyline', function() {
+describe('polyshape', function() {
   var point = {
     type: 'Point',
     coordinates: [100.1, 0.1]
@@ -63,36 +63,36 @@ describe('polyline', function() {
   describe('decode', function() {
 
     it('decodes a point', function() {
-      expect(polyline.decode('0_x}aR_pR')).to.deep.equal(point);
+      expect(polyshape.decode('0_x}aR_pR')).to.deep.equal(point);
     });
 
     it('decodes a line', function() {
-      expect(polyline.decode('1_x}aR_pR_ibE_ibE')).to.deep.equal(line);
+      expect(polyshape.decode('1_x}aR_pR_ibE_ibE')).to.deep.equal(line);
     });
 
     it('decodes a polygon', function() {
-      expect(polyline.decode('2_x}aR_pR_ibE??_ibE~hbE??~hbE')).to.deep.equal(polygon);
+      expect(polyshape.decode('2_x}aR_pR_ibE??_ibE~hbE??~hbE')).to.deep.equal(polygon);
     });
 
     it('decodes a polygon with inner rings', function() {
-      expect(polyline.decode('2_x}aR_pR_ibE??_ibE~hbE??~hbE(_iqbR_af@_etB??_etB~dtB??~dtB'))
+      expect(polyshape.decode('2_x}aR_pR_ibE??_ibE~hbE??~hbE(_iqbR_af@_etB??_etB~dtB??~dtB'))
         .to.deep.equal(polygonWithRings);
     });
 
     it('decodes a multi point', function() {
-      expect(polyline.decode('3_x}aR_pR_ibE_ibE')).to.deep.equal(multiPoint);
+      expect(polyshape.decode('3_x}aR_pR_ibE_ibE')).to.deep.equal(multiPoint);
     });
 
     it('decodes a multi line', function() {
-      expect(polyline.decode('1_x}aR_pR_ibE_ibE 1_ldnR_dyK_ibE_ibE')).to.deep.equal(multiLine);
+      expect(polyshape.decode('1_x}aR_pR_ibE_ibE 1_ldnR_dyK_ibE_ibE')).to.deep.equal(multiLine);
     });
 
     it('decodes a multi polygon', function() {
-      expect(polyline.decode('2_ldnR_dyK_ibE??_ibE~hbE??~hbE 2_x}aR_pR_ibE??_ibE~hbE??~hbE(_iqbR_af@_etB??_etB~dtB??~dtB')).to.deep.equal(multiPolygon);
+      expect(polyshape.decode('2_ldnR_dyK_ibE??_ibE~hbE??~hbE 2_x}aR_pR_ibE??_ibE~hbE??~hbE(_iqbR_af@_etB??_etB~dtB??~dtB')).to.deep.equal(multiPolygon);
     });
 
     it('decodes a geometry collection', function() {
-      expect(polyline.decode('0_x}aR_pR 1_x}aR_pR_ibE_ibE 2_x}aR_pR_ibE??_ibE~hbE??~hbE')).to.deep.equal(collection);
+      expect(polyshape.decode('0_x}aR_pR 1_x}aR_pR_ibE_ibE 2_x}aR_pR_ibE??_ibE~hbE??~hbE')).to.deep.equal(collection);
     });
   });
 

@@ -1,8 +1,8 @@
 {
-  "name": "polyline",
+  "name": "polyshape",
   "version": "1.0.0",
-  "description": "Parser/Encoder for Spatial4j extended polyline format",
-  "main": "polyline.js",
+  "description": "Parser/Encoder for Spatial4j extended Polyline format",
+  "main": "polyshape.js",
   "scripts": {
     "test": "mocha"
   },

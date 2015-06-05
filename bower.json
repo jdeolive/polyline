@@ -1,11 +1,8 @@
 {
-  "name": "polyline",
-  "main": "polyline.js",
+  "name": "polyshape",
+  "main": "polyshape.js",
   "version": "1.0.0",
-  "authors": [
-    "jdeolive <jdeolive@gmail.com>"
-  ],
-  "description": "Parser/Encoder for Spatial4j extended polyline format",
+  "description": "Parser/Encoder for Spatial4j extended Polyline format",
   "moduleType": [
     "node"
   ],

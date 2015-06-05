@@ -1,4 +1,4 @@
-var polyline = {};
+var polyshape = {};
 
 var Key = {
   Point: '0',
@@ -13,9 +13,9 @@ var Key = {
 };
 
 /**
- * Polyline reader.
+ * Polyshape reader.
  *
- * @param {string} input The encoded polyline input.
+ * @param {string} input The encoded polyshape input.
  * @param {number} precision Number of decimal places used to encode input, defaults to 5.
  */
 function Reader(input, precision) {
@@ -244,13 +244,13 @@ Reader.prototype.finalGeometry = function() {
 }
 
 /**
- * Decodes an encoded polyline string into a GeoJSON geometry.
+ * Decodes an encoded polyshape string into a GeoJSON geometry.
  *
- * @param {string} str Encoded polyline string.
+ * @param {string} str Encoded polyshape string.
  *
  * @return {object} The decoded geometry as GeoJSON.
  */
-polyline.decode = function(str) {
+polyshape.decode = function(str) {
   var key;
   var r = new Reader(str);
   while (r.hasMore()) {
@@ -278,4 +278,4 @@ polyline.decode = function(str) {
   return r.finalGeometry();
 }
 
-if (typeof module === 'object' && module.exports) module.exports = polyline;
+if (typeof module === 'object' && module.exports) module.exports = polyshape;
