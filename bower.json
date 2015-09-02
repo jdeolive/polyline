@@ -1,7 +1,7 @@
 {
   "name": "polyshape",
   "main": "polyshape.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Parser/Encoder for Spatial4j extended Polyline format",
   "moduleType": [
     "node",
