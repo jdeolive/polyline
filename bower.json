@@ -3,6 +3,9 @@
   "main": "polyshape.js",
   "version": "0.1.0",
   "description": "Parser/Encoder for Spatial4j extended Polyline format",
+  "main": [
+    "dist/polyshape.js"
+  ],
   "moduleType": [
     "node",
     "globals"

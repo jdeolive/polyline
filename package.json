@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/voyagersearch/polyshape.git"
   },
-  "main": "polyshape.js",
+  "main": "dist/polyshape.js",
   "scripts": {
     "test": "mocha"
   },
