@@ -1,4 +1,4 @@
-var polyshape = {};
+var Polyshape = {};
 
 var Key = {
   Point: '0',
@@ -250,7 +250,7 @@ Reader.prototype.finalGeometry = function() {
  *
  * @return {object} The decoded geometry as GeoJSON.
  */
-polyshape.decode = function(str) {
+Polyshape.decode = function(str) {
   var key;
   var r = new Reader(str);
   while (r.hasMore()) {
@@ -278,4 +278,4 @@ polyshape.decode = function(str) {
   return r.finalGeometry();
 }
 
-if (typeof module === 'object' && module.exports) module.exports = polyshape;
+if (typeof module === 'object' && module.exports) module.exports = Polyshape;
