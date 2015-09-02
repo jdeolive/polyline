@@ -4,7 +4,14 @@
   "version": "1.0.0",
   "description": "Parser/Encoder for Spatial4j extended Polyline format",
   "moduleType": [
-    "node"
+    "node",
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
   ],
   "license": "Apache-2.0"
 }
