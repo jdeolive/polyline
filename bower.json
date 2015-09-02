@@ -14,7 +14,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
+    "test",
+    "Gulpfile.js"
   ],
   "license": "Apache-2.0"
 }
